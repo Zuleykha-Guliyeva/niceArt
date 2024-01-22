@@ -22,10 +22,11 @@ const colors = {
   contactTitleText: '#414D44',
 
   //home
-  abutbtnColor: "#3e6f00",
-  mainImgTextColor: "#414D44",
-  aboutusTxt: "#3E6F00",
-  finInputColor: "#404D43",
+  greySec: '#3E6F0005',
+
+  //calculator
+  agreeGrey: '#404D43',
+  agreeBlue: '#2D68FE',
 };
 
 export default colors;

@@ -7,7 +7,7 @@ const commonStyles = {
       fontSize: sizes.base,
     },
     body: {
-      fontFamily: fonts.fontMain,
+      fontFamily: fonts.font,
       margin: 0,
       padding: 0,
     },
