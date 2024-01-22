@@ -4,31 +4,6 @@ import { rem } from 'assets/styles/abstracts/functions';
 import { createUseStyles } from 'react-jss';
 
 const styles = {
-  leidTitle: {
-    fontSize: rem(70),
-    lineHeight: rem(95),
-    fontWeight: '800',
-    letterSpacing: rem(0),
-    fontFamily: fonts.font,
-    color: colors.navActiveText,
-    textAlign: 'justify',
-  },
-  leidDescription: {
-    '& p': {
-      fontFamily: fonts.font,
-      fontSize: rem(16),
-      fontWeight: '400',
-      lineHeight: rem(22),
-      letterSpacing: rem(0),
-      textAlign: 'left',
-      color: colors.navText,
-    },
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   grey: {
     marginTop: rem(173),
     background: colors.greySec,

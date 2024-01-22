@@ -1,4 +1,3 @@
-import ButtonComponent from 'core/shared/button/button.component';
 import { useHomeStyles } from './home.style';
 import CategoryComponent from 'core/shared/category-span/category.component';
 import { Link } from 'react-router-dom';
@@ -6,32 +5,25 @@ import sekil1 from 'assets/images/statics/homepage1.png';
 import sekil2 from 'assets/images/statics/homepage2.png';
 import { CiPlay1 } from 'react-icons/ci';
 import LoanCalculatorComponent from 'core/shared/loan-calculator/loan-calculator.component';
+import LeadsComponent from 'core/shared/leads/leads.component';
+import ButtonComponent from 'core/shared/button/button.component';
 
 const HomeComponent = () => {
   const classes = useHomeStyles();
   return (
     <div className='container'>
-      <section className='leids'>
-        <div className='row'>
-          <div className='col-md-6'>
-            <div className={classes.leidTitle}>
-              We help you find the perfect loan
-            </div>
-          </div>
-          <div className='col-md-6'>
-            <div className={classes.leidDescription}>
-              <p className='pb-25'>
-                Malesuada pellentesque bibendum enim eu sit. Tincidunt eget mi
-                est, egestas. Nunc, dignissim amet, purus amet. Amet dictum sit
-                elit urna non purus, gravida commodo.
-              </p>
-              <div className='w-100'>
-                <ButtonComponent buttonText='Products' classN='greenBtn' />
-                <ButtonComponent buttonText='About NICART' classN='greyBtn' />
-              </div>
-            </div>
-          </div>
-        </div>
+      <section className='leadsSection'>
+        <LeadsComponent
+          title={'We help you find the perfect loan'}
+          tag=''
+          subTitle=''
+          description='Malesuada pellentesque bibendum enim eu sit. Tincidunt eget mi
+              est, egestas. Nunc, dignissim amet, purus amet. Amet dictum sit
+              elit urna non purus, gravida commodo.'
+        >
+          <ButtonComponent buttonText='Products' classN='greenBtn' />
+          <ButtonComponent buttonText='About NICART' classN='greyBtn' />
+        </LeadsComponent>
       </section>
       <section className={classes.grey}>
         <div className={classes.videoSec}>

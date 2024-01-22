@@ -22,14 +22,13 @@ const LoanCalculatorComponent = () => {
   };
 
   useEffect(() => {
-    // Calculate initial monthly payment on component mount
     const { loanAmount, loanTerm, interestRate } = initialValues;
     const initialMonthlyPayment = calculateMonthlyPayment(
       loanAmount,
       loanTerm,
       interestRate
     );
-    setMonthlyPayment(initialMonthlyPayment.toFixed(2));
+    setMonthlyPayment(parseFloat(initialMonthlyPayment.toFixed(2)));
   }, []);
 
   const initialValues = {
@@ -68,7 +67,9 @@ const LoanCalculatorComponent = () => {
                       interestRate
                     );
 
-                    setMonthlyPayment(calculatedMonthlyPayment.toFixed(2));
+                    setMonthlyPayment(
+                      parseFloat(calculatedMonthlyPayment.toFixed(2))
+                    );
                     setFieldValue('loanAmount', newLoanAmount);
                   }}
                 />
@@ -83,7 +84,9 @@ const LoanCalculatorComponent = () => {
                       interestRate
                     );
 
-                    setMonthlyPayment(calculatedMonthlyPayment.toFixed(2));
+                    setMonthlyPayment(
+                      parseFloat(calculatedMonthlyPayment.toFixed(2))
+                    );
                     setFieldValue('loanAmount', value);
                   }}
                   defaultValue={10000}
@@ -108,7 +111,9 @@ const LoanCalculatorComponent = () => {
                       interestRate
                     );
 
-                    setMonthlyPayment(calculatedMonthlyPayment.toFixed(2));
+                    setMonthlyPayment(
+                      parseFloat(calculatedMonthlyPayment.toFixed(2))
+                    );
                     setFieldValue('loanTerm', newLoanTerm);
                   }}
                 />
@@ -124,7 +129,9 @@ const LoanCalculatorComponent = () => {
                       interestRate
                     );
 
-                    setMonthlyPayment(calculatedMonthlyPayment.toFixed(2));
+                    setMonthlyPayment(
+                      parseFloat(calculatedMonthlyPayment.toFixed(2))
+                    );
                     setFieldValue('loanTerm', value);
                   }}
                   max={180}
@@ -148,7 +155,9 @@ const LoanCalculatorComponent = () => {
                       newInterestRate
                     );
 
-                    setMonthlyPayment(calculatedMonthlyPayment.toFixed(2));
+                    setMonthlyPayment(
+                      parseFloat(calculatedMonthlyPayment.toFixed(2))
+                    );
                     setFieldValue('interestRate', newInterestRate);
                   }}
                 />
@@ -164,7 +173,9 @@ const LoanCalculatorComponent = () => {
                       value
                     );
 
-                    setMonthlyPayment(calculatedMonthlyPayment.toFixed(2));
+                    setMonthlyPayment(
+                      parseFloat(calculatedMonthlyPayment.toFixed(2))
+                    );
                     setFieldValue('interestRate', value);
                   }}
                 />
