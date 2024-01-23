@@ -1,8 +1,11 @@
 import useLocalization from 'assets/lang';
 import { useProductDetailStyles } from './productDetail.style';
-import CreditStaticItemComponent from './components/creditStaticItem.component';
+import CreditStaticItemComponent from '../../core/shared/credit-static/creditStaticItem.component';
 import { useParams } from 'react-router-dom';
 import { useProducts } from 'pages/products/actions/products.query';
+import LoanCalculatorComponent from 'core/shared/loan-calculator/loan-calculator.component';
+import LoanGreyComponent from 'core/shared/loan-grey-overlay/loan-grey.component';
+import { generateGuid } from 'core/helpers/generate-guid';
 
 const ProductDetailComponent = () => {
   const translate = useLocalization();
@@ -50,9 +53,32 @@ const ProductDetailComponent = () => {
           </div>
         </section>
         <section className='creditStatistic'>
-          <CreditStaticItemComponent creditProps={selectedProduct?.features} />
+          <div className='row justify-end'>
+            <div key={generateGuid()} className='col-md-4'>
+              <CreditStaticItemComponent
+                creditProps={selectedProduct?.features}
+                creditPropsDesc=''
+              />
+            </div>
+            <div key={generateGuid()} className='col-md-4'>
+              <CreditStaticItemComponent
+                creditProps={selectedProduct?.features}
+                creditPropsDesc=''
+              />
+            </div>
+            <div key={generateGuid()} className='col-md-4'>
+              <CreditStaticItemComponent
+                creditProps={selectedProduct?.features}
+                creditPropsDesc=''
+              />
+            </div>
+          </div>
         </section>
-        <section className='creditCalc'></section>
+        <section className='creditCalc'>
+          <LoanGreyComponent padding='' overlay=''>
+            <LoanCalculatorComponent />
+          </LoanGreyComponent>
+        </section>
       </div>
     </>
   );

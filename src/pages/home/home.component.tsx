@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 import sekil1 from 'assets/images/statics/homepage1.png';
 import sekil2 from 'assets/images/statics/homepage2.png';
 import { CiPlay1 } from 'react-icons/ci';
-import LoanCalculatorComponent from 'core/shared/loan-calculator/loan-calculator.component';
 import LeadsComponent from 'core/shared/leads/leads.component';
 import ButtonComponent from 'core/shared/button/button.component';
+import LoanGreyComponent from 'core/shared/loan-grey-overlay/loan-grey.component';
+import LoanCalculatorComponent from 'core/shared/loan-calculator/loan-calculator.component';
 
 const HomeComponent = () => {
   const classes = useHomeStyles();
@@ -108,25 +109,7 @@ const HomeComponent = () => {
           </div>
         </div>
       </section>
-      <section className={classes.loanCalculator}>
-        <div className={classes.overlay}></div>
-        <div className='row align-center'>
-          <div className='col-md-5'>
-            <CategoryComponent text='Apply to loan' />
-            <p className={classes.productsTitle}>
-              Id duis id turpis mi quisque. Nulla.
-            </p>
-            <p className={classes.productsDescription}>
-              Malesuada tortor fringilla ut faucibus. Urna tellus lectus platea
-              turpis non. Tellus odio eu ante tincidunt vivamus nunc nibh arcu,
-              augue.
-            </p>
-          </div>
-          <div className='col-md-7'>
-            <LoanCalculatorComponent />
-          </div>
-        </div>
-      </section>
+      <LoanGreyComponent padding='' overlay=''><LoanCalculatorComponent/></LoanGreyComponent>
     </div>
   );
 };

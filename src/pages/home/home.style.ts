@@ -116,20 +116,7 @@ const styles = {
     fontWeight: '400',
     lineHeight: rem(24),
   },
-  loanCalculator: {
-    position: 'relative',
-    marginBottom: rem(200),
-    padding: `${rem(120) + ' ' + rem(60) + ' ' + rem(120) + ' ' + rem(0)}`,
-  },
-  overlay: {
-    width: '82%',
-    height: rem(580),
-    background: colors.greySec,
-    position: 'absolute',
-    top: rem(0),
-    right: rem(0),
-    zIndex: '-5'
-  },
+
 };
 
 export const useHomeStyles = createUseStyles(styles);

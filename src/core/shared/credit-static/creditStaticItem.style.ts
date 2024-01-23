@@ -38,8 +38,8 @@ const style = {
   },
   icon_descrip: {
     fontFamily: fonts.font,
-    fontSize: rem(18),
-    fontWeight: '500',
+    fontSize: rem(16),
+    fontWeight: '400',
     lineHeight: rem(24),
     letterSpacing: 0,
     textAlign: 'left',
