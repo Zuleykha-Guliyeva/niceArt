@@ -18,7 +18,7 @@ const colors = {
 
   //contacts color
   contactBackground: '#3E6F000A',
-  contactTitleActive: '#3E6F00',
+  contactTitleActive: '#3E6F00', 
   contactTitleText: '#414D44',
 
   //home
@@ -27,6 +27,10 @@ const colors = {
   //calculator
   agreeGrey: '#404D43',
   agreeBlue: '#2D68FE',
+
+  //tag
+  partnersTag: '#3E6F0014',
+
 };
 
 export default colors;

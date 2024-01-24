@@ -22,8 +22,12 @@ const HomeComponent = () => {
               est, egestas. Nunc, dignissim amet, purus amet. Amet dictum sit
               elit urna non purus, gravida commodo.'
         >
-          <ButtonComponent buttonText='Products' classN='greenBtn' />
-          <ButtonComponent buttonText='About NICART' classN='greyBtn' />
+          <ButtonComponent buttonText='Products' classN='greenBtn' close={''} />
+          <ButtonComponent
+            buttonText='About NICART'
+            classN='greyBtn'
+            close={''}
+          />
         </LeadsComponent>
       </section>
       <section className={classes.grey}>
@@ -109,7 +113,9 @@ const HomeComponent = () => {
           </div>
         </div>
       </section>
-      <LoanGreyComponent padding='' overlay=''><LoanCalculatorComponent/></LoanGreyComponent>
+      <LoanGreyComponent padding='' overlay=''>
+        <LoanCalculatorComponent />
+      </LoanGreyComponent>
     </div>
   );
 };

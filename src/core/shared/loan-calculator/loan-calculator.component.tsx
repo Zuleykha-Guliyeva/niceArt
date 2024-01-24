@@ -227,7 +227,11 @@ const LoanCalculatorComponent = () => {
                 </label>
               </div>
               <div className='col-md-6'>
-                <ButtonComponent buttonText='Müraciət et' classN='muraciet' />
+                <ButtonComponent
+                  buttonText='Müraciət et'
+                  classN='muraciet'
+                  close={''}
+                />
               </div>
             </div>
           </Form>
