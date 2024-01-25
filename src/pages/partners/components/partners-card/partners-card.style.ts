@@ -12,6 +12,7 @@ const styles = {
       'linear-gradient(0deg, rgba(62, 111, 0, 0.02), rgba(62, 111, 0, 0.02)),linear-gradient(0deg, #FFFFFF, #FFFFFF)',
     boxShadown: '0px 0px 4px 0px #3E6F000A',
     marginBottom: rem(32),
+    cursor: 'pointer',
   },
   titleIcon: {
     display: 'flex',

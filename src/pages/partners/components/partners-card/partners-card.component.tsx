@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import { usePartnersCardStyles } from './partners-card.style';
-import cola from 'assets/images/statics/cola.svg';
+import cola from 'assets/images/statics/partners/cola.svg';
 import ModalComponent from 'core/shared/modal/modal.component';
 
 const PartnersCardComponent = () => {

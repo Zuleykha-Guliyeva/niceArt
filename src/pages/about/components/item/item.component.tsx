@@ -1,5 +1,5 @@
 import { useItemStyles } from "./item.style";
-import abouticon from 'assets/images/statics/abouticon.png'
+import abouticon from 'assets/images/statics/about/abouticon.png'
 const ItemComponent = ({ classN }) => {
   const classes = useItemStyles();
   const classItem = classN ? classes[classN] : ''

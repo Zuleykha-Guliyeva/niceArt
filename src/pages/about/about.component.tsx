@@ -1,7 +1,7 @@
 import LeadsComponent from 'core/shared/leads/leads.component';
 import LoanGreyComponent from 'core/shared/loan-grey-overlay/loan-grey.component';
 import ItemsListComponent from './components/Items-list/items-list.component';
-import aboutImg from 'assets/images/statics/about-img.png'
+import aboutImg from 'assets/images/statics/about/about-img.png'
 import { useAboutStyles } from './about.style';
 import CategoryComponent from 'core/shared/category-span/category.component';
 import CreditStaticItemComponent from 'core/shared/credit-static/creditStaticItem.component';

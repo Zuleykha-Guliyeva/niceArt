@@ -17,9 +17,8 @@ const colors = {
   sosialIcon: '#6E9E37',
 
   //contacts color
-  contactBackground: '#3E6F000A',
-  contactTitleActive: '#3E6F00', 
-  contactTitleText: '#414D44',
+  contactText: '#333333',
+  inputText: '#404D4399',
 
   //home
   greySec: '#3E6F0005',
@@ -30,7 +29,6 @@ const colors = {
 
   //tag
   partnersTag: '#3E6F0014',
-
 };
 
 export default colors;

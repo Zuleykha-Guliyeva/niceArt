@@ -1,6 +1,6 @@
 import { Modal } from 'antd';
 import { useModalStyles } from './modal.style';
-import cola from 'assets/images/statics/cola.svg';
+import cola from 'assets/images/statics/partners/cola.svg';
 import ButtonComponent from '../button/button.component';
 
 const ModalComponent = ({ open, onClose }) => {
