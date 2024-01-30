@@ -1,7 +1,7 @@
-import colors from "assets/styles/abstracts/color";
-import fonts from "assets/styles/abstracts/fonts";
-import { rem } from "assets/styles/abstracts/functions";
-import { createUseStyles } from "react-jss"
+import colors from 'assets/styles/abstracts/color';
+import fonts from 'assets/styles/abstracts/fonts';
+import { rem } from 'assets/styles/abstracts/functions';
+import { createUseStyles } from 'react-jss';
 
 const style = {
   credit_detail_box: {
@@ -32,6 +32,7 @@ const style = {
     fontWeight: '800',
     lineHeight: rem(26),
     letterSpacing: 0,
+    height: rem(50),
     textAlign: 'left',
     color: colors.titleGreen,
     marginBottom: rem(16),

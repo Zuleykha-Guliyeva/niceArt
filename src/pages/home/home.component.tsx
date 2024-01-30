@@ -8,22 +8,25 @@ import LeadsComponent from 'core/shared/leads/leads.component';
 import ButtonComponent from 'core/shared/button/button.component';
 import LoanGreyComponent from 'core/shared/loan-grey-overlay/loan-grey.component';
 import LoanCalculatorComponent from 'core/shared/loan-calculator/loan-calculator.component';
+import { useVideos } from './actions/video.query';
 
 const HomeComponent = () => {
   const classes = useHomeStyles();
+  const {data} = useVideos();
+  console.log(data);
+  
   return (
     <div className='container'>
       <section className='leadsSection'>
-        <LeadsComponent
-          title={'We help you find the perfect loan'}
-          tag=''
-          subTitle=''
-          description='Malesuada pellentesque bibendum enim eu sit. Tincidunt eget mi
-              est, egestas. Nunc, dignissim amet, purus amet. Amet dictum sit
-              elit urna non purus, gravida commodo.'
-        >
-          <ButtonComponent buttonText='Products' classN='greenBtn' close={''} />
+        <LeadsComponent i={0}>
           <ButtonComponent
+            url=''
+            buttonText='Products'
+            classN='greenBtn'
+            close={''}
+          />
+          <ButtonComponent
+            url=''
             buttonText='About NICART'
             classN='greyBtn'
             close={''}
@@ -41,24 +44,14 @@ const HomeComponent = () => {
                   </div>
                 </div>
                 <video width='100%' height='100%' poster={sekil1}>
-                  <source src='path/to/your/video.mp4' type='video/mp4' />
-                  Your browser does not support the video tag.
+                  <source src={data?.file.url} type='video/mp4' />
                 </video>
               </div>
             </div>
           </div>
           <div className='row'>
             <div className='col-12'>
-              <div className={classes.videoText}>
-                Malesuada tortor fringilla ut faucibus. Urna tellus lectus
-                platea turpis non. Tellus odio eu ante tincidunt vivamus nunc
-                nibh arcu, augue. Egestas et amet neque placerat aliquam tempor.
-                Ultricies natoque lacus, id natoque cras. Erat aliquam
-                sollicitudin risus semper molestie. Ut mattis nisl faucibus vel
-                tincidunt. Et in laoreet faucibus urna quis. Tempus in
-                condimentum malesuada ut molestie et in. Lobortis neque aliquam
-                felis ac ac augue elit.
-              </div>
+              <div className={classes.videoText}>{data?.description}</div>
             </div>
           </div>
         </div>

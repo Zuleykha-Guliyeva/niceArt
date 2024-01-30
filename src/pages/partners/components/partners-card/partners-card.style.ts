@@ -18,6 +18,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     marginBottom: rem(32),
+    '& img': { width: rem(32), height: rem(32) },
     '& span': {
       fontFamily: fonts.font,
       fontSize: rem(16),

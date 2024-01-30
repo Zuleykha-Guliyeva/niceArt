@@ -6,6 +6,11 @@ import { useProducts } from 'pages/products/actions/products.query';
 import LoanCalculatorComponent from 'core/shared/loan-calculator/loan-calculator.component';
 import LoanGreyComponent from 'core/shared/loan-grey-overlay/loan-grey.component';
 import { generateGuid } from 'core/helpers/generate-guid';
+import creditIcon1 from 'assets/images/statics/credit_icon_1.svg';
+import creditIcon2 from 'assets/images/statics/credit_icon_2.svg';
+import creditIcon3 from 'assets/images/statics/credit_icon_3.svg';
+import creditIcon4 from 'assets/images/statics/credit_icon_4.svg';
+import creditIcon5 from 'assets/images/statics/credit_icon_5.svg';
 
 const ProductDetailComponent = () => {
   const translate = useLocalization();
@@ -53,23 +58,40 @@ const ProductDetailComponent = () => {
           </div>
         </section>
         <section className='creditStatistic'>
-          <div className='row justify-end'>
+          <div className='row justify-start'>
             <div key={generateGuid()} className='col-md-4'>
               <CreditStaticItemComponent
-                creditProps={selectedProduct?.features}
-                creditPropsDesc=''
+                creditPropsTitle='Kreditin məbləği  (AZN)'
+                creditProps={selectedProduct?.features?.amount}
+                icon={creditIcon1}
               />
             </div>
             <div key={generateGuid()} className='col-md-4'>
               <CreditStaticItemComponent
-                creditProps={selectedProduct?.features}
-                creditPropsDesc=''
+                creditPropsTitle='Kreditin ilkin ödənişi (%)'
+                creditProps={selectedProduct?.features?.initialPayment}
+                icon={creditIcon2}
               />
             </div>
             <div key={generateGuid()} className='col-md-4'>
               <CreditStaticItemComponent
-                creditProps={selectedProduct?.features}
-                creditPropsDesc=''
+                creditPropsTitle='Kreditin faiz dərəcəsi  (%)'
+                creditProps={selectedProduct?.features?.percentage}
+                icon={creditIcon3}
+              />
+            </div>
+            <div key={generateGuid()} className='col-md-4'>
+              <CreditStaticItemComponent
+                creditPropsTitle='Kreditin müddəti  (ay)'
+                creditProps={selectedProduct?.features?.period}
+                icon={creditIcon4}
+              />
+            </div>
+            <div key={generateGuid()} className='col-md-4'>
+              <CreditStaticItemComponent
+                creditPropsTitle='Kreditin rəsmiləşdirilməsi üçün komissiya haqqı  (%)'
+                creditProps={selectedProduct?.features?.comission}
+                icon={creditIcon5}
               />
             </div>
           </div>

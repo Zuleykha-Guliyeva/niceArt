@@ -1,9 +1,8 @@
 import { useCallback, useState } from 'react';
 import { usePartnersCardStyles } from './partners-card.style';
-import cola from 'assets/images/statics/partners/cola.svg';
 import ModalComponent from 'core/shared/modal/modal.component';
 
-const PartnersCardComponent = () => {
+const PartnersCardComponent = ({item}) => {
   const classes = usePartnersCardStyles();
   const [open, setOpen] = useState(false);
   const showModal = useCallback(() => {
@@ -14,16 +13,16 @@ const PartnersCardComponent = () => {
       <div className='col-md-3'>
         <div className={classes.card} onClick={showModal}>
           <div className={classes.titleIcon}>
-            <img src={cola} alt='' />
-            <span>Metus, vel</span>
+            <img src={item?.file.url} alt='' />
+            <span>{item?.name}</span>
           </div>
           <div className={classes.tag}>
-            <span>E-commerce</span>
+            <span>{item?.tag}</span>
           </div>
         </div>
       </div>
 
-      <ModalComponent open={open} onClose={() => setOpen(false)} />
+      <ModalComponent item={item} open={open} onClose={() => setOpen(false)} />
     </>
   );
 };

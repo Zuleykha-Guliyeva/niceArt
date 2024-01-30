@@ -6,12 +6,12 @@ import {
   ArrowRightUp,
 } from 'assets/images/icons/arrows';
 
-const ButtonComponent = ({ buttonText, classN, close }) => {
+const ButtonComponent = ({ buttonText, classN, close, url }) => {
   const classes = useButtonStyles();
 
   const handleClick = useCallback(() => {
     if (classN === 'visitBtn') {
-      window.open('https://google.com', '_blank');
+      window.open(`${url}`, '_blank');
     } else if (classN === 'closeBtn') {
       close();
     }
