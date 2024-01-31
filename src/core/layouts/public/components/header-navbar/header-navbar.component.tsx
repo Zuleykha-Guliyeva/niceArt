@@ -7,7 +7,7 @@ import { useHeaderNavbarStyles } from "./header-navbar.style";
 const HeaderNavbarComponent = () => {
   const classes = useHeaderNavbarStyles();
   return (
-    <div className={`${classes.navbar}`}>
+    <div className={classes.navbar}>
       <div className="row align-center">
         <div className="col-2">
           <div className={classes.logoImg}>

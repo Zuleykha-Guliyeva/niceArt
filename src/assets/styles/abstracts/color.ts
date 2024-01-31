@@ -13,6 +13,7 @@ const colors = {
   titleBlack: '#414D44',
   iconBackground: '#3E6F0005',
   iconDescrip: '#707872',
+
   //sosial icon
   sosialIcon: '#6E9E37',
 
@@ -23,12 +24,17 @@ const colors = {
   //home
   greySec: '#3E6F0005',
 
+  //footer
+  footBack: '#f1f6f5',
+
   //calculator
   agreeGrey: '#404D43',
   agreeBlue: '#2D68FE',
+  inputborder: '#F1F1F1',
 
   //tag
   partnersTag: '#3E6F0014',
+  modaldescription: '#000',
 };
 
 export default colors;

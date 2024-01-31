@@ -84,5 +84,25 @@ const styles = {
     marginRight: rem(24),
     cursor: 'pointer',
   },
+  borderBottomBtn: {
+    background: 'none',
+    border: 'none',
+    color: colors.navActiveText,
+    fontSize: rem(20),
+    fontWeight: '500',
+    lineHeight: rem(22),
+    textAlign: 'left',
+    cursor: 'pointer',
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: rem(25),
+    '& span': {
+      borderBottom: `5px solid ${colors.navActiveText}`,
+      display: 'inline-block',
+      textAlign: 'center',
+      paddingBottom: rem(7),
+      paddingRight: '0!important',
+    },
+  },
 };
 export const useButtonStyles = createUseStyles(styles);

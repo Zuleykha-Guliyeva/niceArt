@@ -177,15 +177,15 @@ const FooterComponent = () => {
           </div>
         </div>
         <div className='container'>
-          <div className={`${classes.marginToprights}`}>
+          <div className={classes.marginToprights}>
             <div className='row align-center'>
               <div className='col-12 col-md-6'>
-                <div className={`${classes.copyRight}`}>
+                <div className={classes.copyRight}>
                   {translate('copyright')} © {date} {translate('rights')}.
                 </div>
               </div>
               <div className='col-12 col-md-6'>
-                <div className={`${classes.copyRight}`}>
+                <div className={classes.copyRight}>
                   <span>{translate('organisation')}</span>
                   <span className={classes.verticalLine}>|</span>
                   <NavLink to={Routes.about} className={classes.rightReserv}>
@@ -194,8 +194,7 @@ const FooterComponent = () => {
                   <span className={classes.verticalLine}>|</span>
                   <NavLink
                     to={Routes.about}
-                    className={`${classes.rightReserv}`}
-                  >
+                    className={classes.rightReserv}>
                     {translate('privacy')}
                   </NavLink>
                 </div>

@@ -1,17 +1,18 @@
 import { rem } from "assets/styles/abstracts/functions";
+import { breakpoint } from "assets/styles/abstracts/mixins";
 import { createUseStyles } from "react-jss";
 
 const styles = {
   navbar: {
-    width: "100%",
-    padding: rem(40) + " " + rem(0),
-    "@media (max-width: 768px)": { padding: rem(15) + " " + rem(0), },
+    width: '100%',
+    padding: rem(40) + ' ' + rem(0),
+    [breakpoint(768)]: { padding: rem(15) + ' ' + rem(0) },
   },
   logoImg: {
-    display: "flex",
-    alignItems: "center",
-    "& img": {
-      display: "block",
+    display: 'flex',
+    alignItems: 'center',
+    '& img': {
+      display: 'block',
       width: rem(148),
       height: rem(40),
     },

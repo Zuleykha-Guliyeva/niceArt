@@ -12,6 +12,9 @@ const styles = {
     letterSpacing: rem(0),
     textAlign: 'left',
     color: colors.navActiveText,
+    textTransform: 'uppercase',
+    display: 'block',
+    marginBottom: rem(8),
   },
 };
 export const useCategoryStyles = createUseStyles(styles);

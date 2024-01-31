@@ -37,5 +37,20 @@ const styles = {
     marginBottom: rem(10),
     color: colors.navText,
   },
+  relativeRow: {
+    position: 'relative!important',
+    paddingRight: '0!important',
+  },
+  aboutImg: {
+    padding: 0,
+    positon: 'absolute',
+    top: '-25px',
+    right: '-30px',
+    '& img': {
+      maxWidth: '100%',
+      height: rem(550),
+      objectFit: 'cover',
+    },
+  },
 };
 export const useLeadsStyles = createUseStyles(styles)

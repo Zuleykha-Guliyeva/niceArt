@@ -1,5 +1,6 @@
 import colors from "assets/styles/abstracts/color";
 import { rem } from "assets/styles/abstracts/functions";
+import { breakpoint } from "assets/styles/abstracts/mixins";
 import { createUseStyles } from "react-jss";
 
 const styles = {
@@ -7,7 +8,7 @@ const styles = {
     width: '100%',
     textAlign: 'end',
     '& ul': { display: 'flex', justifyContent: 'space-end' },
-    '@media (max-width: 768px)': {
+    [breakpoint(768)]: {
       navMenu: {
         width: '100%',
       },
@@ -40,7 +41,7 @@ const styles = {
   mobileMenuIcon: {
     color: colors.navActiveText,
     display: 'none',
-    '@media (max-width: 768px)': {
+    [breakpoint(768)]: {
       display: 'block',
       cursor: 'pointer',
       '& svg': { width: rem(30), height: rem(30) },

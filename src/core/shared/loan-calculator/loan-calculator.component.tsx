@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 import { useLoanClaculatorStyles } from './loan-calculator.style';
 import { Slider } from 'antd';
 import { useEffect, useState } from 'react';
+import useLocalization from 'assets/lang';
 
 const LoanCalculatorComponent = () => {
   const classes = useLoanClaculatorStyles();
   const [monthlyPayment, setMonthlyPayment] = useState(0);
-
+  const translate = useLocalization();
   const calculateMonthlyPayment = (loanAmount, loanTerm, interestRate) => {
     const monthlyInterestRate = interestRate / 100 / 12;
     const totalPayments = loanTerm;
@@ -51,7 +52,7 @@ const LoanCalculatorComponent = () => {
             <div className='row mb-30'>
               <div className='col-md-4 pr-0'>
                 <label htmlFor='loanAmount' className={classes.inputLabel}>
-                  Kreditin məbləği
+                  {translate('ammount')}
                 </label>
                 <Field
                   id='loanAmount'
@@ -95,7 +96,7 @@ const LoanCalculatorComponent = () => {
               </div>
               <div className='col-md-4 p-0'>
                 <label htmlFor='loanTerm' className={classes.inputLabel}>
-                  Kreditin müddəti
+                  {translate('period')}
                 </label>
                 <Field
                   id='loanTerm'
@@ -139,7 +140,7 @@ const LoanCalculatorComponent = () => {
               </div>
               <div className='col-md-4 pl-0'>
                 <label htmlFor='interestRate' className={classes.inputLabel}>
-                  Faiz dərəcəsi
+                  {translate('interestrate')}
                 </label>
                 <Field
                   id='interestRate'
@@ -184,7 +185,7 @@ const LoanCalculatorComponent = () => {
             <div className='row mb-40'>
               <div className='col-12'>
                 <label htmlFor='' className={classes.inputLabelMonth}>
-                  Aylıq ödəniş
+                  {translate('monthlypayment')}
                 </label>
                 <br />
                 <span className={classes.greenTxt}>{monthlyPayment} ₼</span>
@@ -193,7 +194,7 @@ const LoanCalculatorComponent = () => {
             <div className='row mb-30'>
               <div className='col-md-6'>
                 <label htmlFor='finCode' className={classes.inputLabelFin}>
-                  FIN code{' '}
+                  {translate('fincode')}
                 </label>
                 <br />
                 <Field
@@ -205,7 +206,7 @@ const LoanCalculatorComponent = () => {
               </div>
               <div className='col-md-6'>
                 <label htmlFor='phone' className={classes.inputLabelFin}>
-                  Əlaqə nömrəsi
+                  {translate('phone')}
                 </label>
                 <br />
                 <Field
@@ -221,9 +222,11 @@ const LoanCalculatorComponent = () => {
                 <label className={classes.agree}>
                   <Field type='checkbox' name='agreeTerms' />
                   <Link to='#' className='ml-11'>
-                    <span className={classes.agreeBlue}>AKB RAZILIQ</span>
+                    <span className={classes.agreeBlue}>
+                      {translate('consent')}
+                    </span>
                   </Link>
-                  verilməsi üçün icazə
+                  {translate('permission')}
                 </label>
               </div>
               <div className='col-md-6'>
@@ -231,6 +234,7 @@ const LoanCalculatorComponent = () => {
                   buttonText='Müraciət et'
                   classN='muraciet'
                   close={''}
+                  url={''}
                 />
               </div>
             </div>

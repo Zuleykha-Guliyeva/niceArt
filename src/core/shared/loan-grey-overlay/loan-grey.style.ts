@@ -6,7 +6,7 @@ import { createUseStyles } from 'react-jss';
 const styles = {
   loanCalculator: {
     position: 'relative',
-    marginBottom: rem(200),
+    marginBottom: rem(300),
     padding: `${rem(65) + ' ' + rem(60) + ' ' + rem(65) + ' ' + rem(0)}`,
   },
   overlay: {

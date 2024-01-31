@@ -9,12 +9,12 @@ const styles = {
     background: colors.greySec,
     paddingLeft: rem(106),
     paddingRight: rem(106),
-    height: '1067px',
+    height: rem(1050),
     position: 'relative',
     marginBottom: rem(300),
   },
   videoSec: {
-    marginBottom: rem(80),
+    height: rem(580),
   },
   videoText: {
     fontFamily: fonts.font,
@@ -24,27 +24,26 @@ const styles = {
     letterSpacing: rem(0),
     textAlign: 'justify',
     color: colors.navText,
-    marginTop: rem(490),
+    marginTop: rem(460),
   },
   video: {
     position: 'absolute',
-    top: '-120px',
+    top: '-130px',
     left: rem(106),
     right: rem(106),
     height: rem(578),
-    marginBottom: rem(32),
   },
   customPlayButton: {
     position: 'absolute',
-    bottom: '27px',
+    bottom: rem(27),
     left: '5%',
     transform: 'translate(-50%, -50%)',
-    width: '50px',
-    height: '50px',
+    width: rem(50),
+    height: rem(50),
     background: 'rgba(255, 255, 255, 0.7)',
     borderRadius: '50%',
     textAlign: 'center',
-    lineHeight: '50px',
+    lineHeight: rem(50),
     cursor: 'pointer',
     pading: rem(5),
     display: 'flex',
@@ -56,8 +55,8 @@ const styles = {
     background: colors.light,
     borderRadius: '50%',
     textAlign: 'center',
-    width: '40px',
-    height: '40px',
+    width: rem(40),
+    height: rem(40),
     display: 'flex',
     alignItems: 'center',
     alignContent: 'center',
@@ -81,14 +80,7 @@ const styles = {
     color: colors.navText,
     marginBottom: rem(50),
   },
-  aboutImg: {
-    position: 'relative',
-    top: '-25px',
-    '& img': {
-      positon: 'absolute',
-      maxWidth: '100%',
-    },
-  },
+
   learnMore: {
     color: colors.navText,
     fontFamily: fonts.font,
@@ -116,7 +108,6 @@ const styles = {
     fontWeight: '400',
     lineHeight: rem(24),
   },
-
 };
 
 export const useHomeStyles = createUseStyles(styles);

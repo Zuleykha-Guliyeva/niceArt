@@ -5,9 +5,15 @@ import img2 from 'assets/images/statics/contact/2.png';
 import img3 from 'assets/images/statics/contact/3.png';
 import img4 from 'assets/images/statics/contact/4.png';
 import FormComponent from 'core/shared/form/form.component';
+import useLocalization from 'assets/lang';
+import { useContact } from './actions/contact.query';
 
 const ContactComponent = () => {
   const classes = useContactStyles();
+  const translate = useLocalization();
+  const {data} = useContact();
+  console.log(data);
+  
   return (
     <>
       <section className={classes.discoverSection}>
@@ -15,32 +21,28 @@ const ContactComponent = () => {
           <div className='row'>
             <div className='col-md-5'>
               <div className='contactContent'>
-                <p className={classes.title}>DISCOVER US</p>
+                <p className={classes.title}>{translate('discover')}</p>
                 <p className={classes.description}>
-                  Flick is here to help you; Our experts are available to answer
-                  any questions you might have. We’ve got the answers.
+                  {translate('discoverDesc')}
                 </p>
                 <div className='visitUs'>
-                  <p className={classes.visitTitle}>Visit Us</p>
-                  <p className={classes.visitDesc}>
-                    Office no. G-02. Building 1, Ground Floor. Dubai Media City
-                    – Dubai
-                  </p>
+                  <p className={classes.visitTitle}>{translate('visit')}</p>
+                  <p className={classes.visitDesc}>{data?.location}</p>
                   <p className={classes.visitSubDesc}>
-                    Feel free to get in touch with us through our channels:
+                    {translate('visitDesc')}
                   </p>
                 </div>
                 <div className='emailUs mb-37'>
-                  <p className={classes.visitTitle}>Email US</p>
+                  <p className={classes.visitTitle}>
+                    {translate('emailUs')}
+                  </p>
                   <Link to='#'>
-                    <span className={classes.emailDesc}>
-                      javidan.nasib@gmai.com
-                    </span>
+                    <span className={classes.emailDesc}>{data?.email}</span>
                   </Link>
                 </div>
                 <div className='callUs'>
-                  <p className={classes.visitTitle}>Call US</p>
-                  <p className={classes.emailDesc}>+994 51 535 11 35</p>
+                  <p className={classes.visitTitle}>{translate('callUs')}</p>
+                  <p className={classes.emailDesc}>{data?.phone}</p>
                 </div>
               </div>
             </div>
@@ -67,16 +69,9 @@ const ContactComponent = () => {
         <div className='container'>
           <div className='row'>
             <div className='col-md-5'>
-              <div className={classes.formTitle}>
-                Have a project! Let’s diascuss{' '}
-              </div>
+              <div className={classes.formTitle}>{translate('diascuss')}</div>
               <div className={classes.formDesc}>
-                Vehicula elit est, neque non mattis pharetra, urna lectus
-                magnis. Ultricies tellus adipiscing a sem ultrices eu pulvinar.
-                Urna egestas est aliquet facilisis elit sit. Massa libero turpis
-                facilisi mattis sit ac consectetur malesuada et. Urna, orci arcu
-                senectus mattis nam euismod cum cursus. Enim nunc quis commodo
-                leo libero diam.{' '}
+                {translate('diascussDesc')}
               </div>
             </div>
             <div className='col-md-7'>

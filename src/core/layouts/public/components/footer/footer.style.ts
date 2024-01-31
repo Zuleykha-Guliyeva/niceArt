@@ -1,6 +1,7 @@
 import colors from "assets/styles/abstracts/color";
 import fonts from "assets/styles/abstracts/fonts";
 import { rem } from "assets/styles/abstracts/functions";
+import { breakpoint } from "assets/styles/abstracts/mixins";
 import { createUseStyles } from "react-jss";
 
 const styles = {
@@ -9,87 +10,26 @@ const styles = {
     backgroundColor: colors.footBackground,
     fontFamily: fonts.font,
     '& li:last-child $footMenuItem': { marginBottom: rem(0) },
-    '@media(max-width:768px)': {
+    [breakpoint(768)]: {
       padding: rem(16) + ' ' + rem(0),
     },
   },
   marginToprights: {
     marginTop: rem(132),
-    '@media(max-width:768px)': {
+    [breakpoint(768)]: {
       marginTop: rem(49),
     },
   },
   footer08: {
     padding: 0,
     overflow: 'hidden',
-    background: '#f1f6f5',
-    '& a': {
-      color: '#12cc94',
-    },
-    '& p': {
-      color: 'rgba(0, 0, 0, 0.3)',
-    },
+    background: colors.footBack,
     '& .footer-heading': {
-      fontSize: '18px',
-      marginBottom: '30px',
-      '@media (min-width: 768px)': {
+      fontSize: rem(18),
+      marginBottom: rem(30),
+      [breakpoint(768)]: {
         '&.footer-heading-white': {
-          color: '#fff',
-        },
-      },
-    },
-    '& ul.list-unstyled li a': {
-      color: 'rgba(0, 0, 0, 0.3)',
-    },
-    '& .contact-form': {
-      width: '100%',
-      '& .form-control': {
-        height: '50px',
-        background: '#fff',
-        color: 'rgba(0, 0, 0, 0.3)',
-        fontSize: '14px',
-        borderRadius: '5px',
-        boxShadow: 'none',
-        border: 'none',
-        '&::-webkit-input-placeholder': {
-          color: 'rgba(0, 0, 0, 0.3) !important',
-        },
-        '&::-moz-placeholder': {
-          color: 'rgba(0, 0, 0, 0.3) !important',
-        },
-        '&:-ms-input-placeholder': {
-          color: 'rgba(0, 0, 0, 0.3) !important',
-        },
-        '&:-moz-placeholder': {
-          color: 'rgba(0, 0, 0, 0.3) !important',
-        },
-        '&:focus': {
-          outline: 'none !important',
-          boxShadow: 'none',
-        },
-        '&:focus, &:active': {
-          outline: 'none !important',
-          boxShadow: 'none',
-        },
-      },
-      '& .submit': {
-        background: '#2f89fc !important',
-        color: '#fff',
-      },
-      '& textarea.form-control': {
-        height: 'inherit !important',
-      },
-    },
-    '& .aside-stretch-right': {
-      background: '#12cc94',
-      '&:after': {
-        background: '#12cc94',
-      },
-      '@media (max-width: 767.98px)': {
-        background: 'transparent',
-        '&:after': {
-          background: 'transparent',
-          display: 'none',
+          color: colors.light,
         },
       },
     },
@@ -126,7 +66,7 @@ const styles = {
     fontSize: rem(18),
     lineHeight: rem(30),
     fontWeight: '400',
-    '@media (max-width: 767.98px)': {
+    [breakpoint(767.98)]: {
       fontSize: rem(17),
     },
   },
@@ -147,7 +87,7 @@ const styles = {
     fontSize: rem(18),
     color: colors.navActiveText,
     lineHeight: rem(30),
-    '@media (max-width:768px)': {
+    [breakpoint(768)]: {
       fontSize: rem(16),
     },
   },

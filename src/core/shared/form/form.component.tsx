@@ -2,9 +2,11 @@ import { Form } from 'antd';
 import { Field, Formik } from 'formik';
 import { useFormStyles } from './form.style';
 import ButtonComponent from '../button/button.component';
+import useLocalization from 'assets/lang';
 
 const FormComponent = () => {
   const classes = useFormStyles();
+  const translate = useLocalization();
   const intialValues = {
     name: '',
     email: '',
@@ -19,7 +21,7 @@ const FormComponent = () => {
         <div className={classes.formContainer}>
           <div className={classes.formRow}>
             <div className={classes.formField}>
-              <label htmlFor='name'>Ad Soyad</label> <br />
+              <label htmlFor='name'>{translate('nameSurname')}</label> <br />
               <Field
                 type='text'
                 id='name'
@@ -28,7 +30,7 @@ const FormComponent = () => {
               />
             </div>
             <div className={classes.formField}>
-              <label htmlFor='name'>E-poçt</label> <br />
+              <label htmlFor='name'>{translate('email')}</label> <br />
               <Field
                 type='text'
                 id='name'
@@ -39,7 +41,7 @@ const FormComponent = () => {
           </div>
           <div className={classes.formRow}>
             <div className={classes.formField}>
-              <label htmlFor='name'>Əlaqə nömrəsi</label> <br />
+              <label htmlFor='name'>{translate('phone')}</label> <br />
               <Field
                 type='text'
                 id='name'
@@ -48,7 +50,7 @@ const FormComponent = () => {
               />
             </div>
             <div className={classes.formField}>
-              <label htmlFor='name'>Mövzu</label> <br />
+              <label htmlFor='name'>{translate('subject')}</label> <br />
               <Field
                 type='text'
                 id='name'
@@ -58,7 +60,7 @@ const FormComponent = () => {
             </div>
           </div>
           <div className={classes.formField}>
-            <label htmlFor='name'>Mesajınız</label> <br />
+            <label htmlFor='name'>{translate('msg')}</label> <br />
             <Field
               type='text'
               id='name'
@@ -69,9 +71,10 @@ const FormComponent = () => {
         </div>
         <div className={classes.formRow}>
           <ButtonComponent
-            buttonText='Submit'
+            buttonText={translate('submit')}
             classN='greenBtn100'
             close={''}
+            url={''}
           ></ButtonComponent>
         </div>
       </Form>

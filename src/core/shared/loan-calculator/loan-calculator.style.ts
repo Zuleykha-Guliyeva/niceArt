@@ -27,7 +27,7 @@ const styles = {
     padding: rem(16),
     height: rem(51),
     width: '100%',
-    border: '1px solid #F1F1F1',
+    border: `1px solid ${colors.inputborder}`,
     borderRadius: rem(4),
     gap: rem(2),
     fontSize: rem(16),

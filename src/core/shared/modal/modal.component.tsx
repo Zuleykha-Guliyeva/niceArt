@@ -1,9 +1,11 @@
 import { Modal } from 'antd';
 import { useModalStyles } from './modal.style';
 import ButtonComponent from '../button/button.component';
+import useLocalization from 'assets/lang';
 
 const ModalComponent = ({ open, onClose, item }) => {
   const classes = useModalStyles();
+  const translate = useLocalization();
   const modalFooter = null;
   return (
     <Modal
@@ -32,7 +34,7 @@ const ModalComponent = ({ open, onClose, item }) => {
           <div className='row'>
             <div className='col-6'>
               <ButtonComponent
-                buttonText='Visit Website'
+                buttonText={translate('visitBtn')}
                 classN='visitBtn'
                 close={onClose}
                 url={item.file.url}
@@ -41,7 +43,7 @@ const ModalComponent = ({ open, onClose, item }) => {
             <div className='col-6'>
               <ButtonComponent
                 url={item.file.url}
-                buttonText='Close'
+                buttonText={translate('closeBtn')}
                 classN='closeBtn'
                 close={onClose}
               />

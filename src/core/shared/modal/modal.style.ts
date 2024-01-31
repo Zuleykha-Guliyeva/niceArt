@@ -24,7 +24,7 @@ const styles = {
       letterSpacing: rem(0),
       textAlign: 'left',
       marginLeft: rem(20),
-      color: '#000',
+      color: colors.modaldescription,
     },
   },
   tag: {
