@@ -32,7 +32,7 @@ const ProductDetailComponent = () => {
               <div className='col-md-5 col-sm-12'>
                 <h1 className={classes.title}>{selectedProduct?.name}</h1>
               </div>
-              <div className={`col-md-7 col-sm-12 p-0 pl-100`}>
+              <div className={`col-md-7 col-sm-12 p-0`}>
                 <div className={classes.productImg}>
                   <img src={selectedProduct?.file.url} alt='' />
                 </div>

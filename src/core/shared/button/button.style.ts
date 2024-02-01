@@ -1,9 +1,14 @@
 import colors from 'assets/styles/abstracts/color';
 import { rem } from 'assets/styles/abstracts/functions';
+import { breakpoint } from 'assets/styles/abstracts/mixins';
 import { createUseStyles } from 'react-jss';
 
 const styles = {
   greenBtn: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     padding: `${rem(12) + ' ' + rem(24) + ' ' + rem(12) + ' ' + rem(24)}`,
     borderRadius: rem(8),
     background: colors.navActiveText,
@@ -15,8 +20,19 @@ const styles = {
     textAlign: 'left',
     marginRight: rem(24),
     cursor: 'pointer',
+    [breakpoint(991)]: {
+      padding: `${rem(12) + ' ' + rem(10) + ' ' + rem(12) + ' ' + rem(10)}`,
+      '& span': {
+        fontSize: rem(14),
+        paddingRight: `{${rem(5)}!important}`,
+      },
+    },
   },
   greyBtn: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     padding: `${rem(12) + ' ' + rem(24) + ' ' + rem(12) + ' ' + rem(24)}`,
     borderRadius: rem(8),
     border: `1px solid ${colors.navActiveText}`,
@@ -26,6 +42,13 @@ const styles = {
     lineHeight: rem(24),
     textAlign: 'left',
     cursor: 'pointer',
+    [breakpoint(991)]: {
+      padding: `${rem(12) + ' ' + rem(10) + ' ' + rem(12) + ' ' + rem(10)}`,
+      '& span': {
+        fontSize: rem(14),
+        paddingRight: '5px!important',
+      },
+    },
   },
   greenBtn100: {
     width: '100%',

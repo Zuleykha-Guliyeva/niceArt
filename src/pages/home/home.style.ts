@@ -1,6 +1,7 @@
 import colors from 'assets/styles/abstracts/color';
 import fonts from 'assets/styles/abstracts/fonts';
 import { rem } from 'assets/styles/abstracts/functions';
+import { breakpoint } from 'assets/styles/abstracts/mixins';
 import { createUseStyles } from 'react-jss';
 
 const styles = {
@@ -32,6 +33,9 @@ const styles = {
     left: rem(106),
     right: rem(106),
     height: rem(578),
+    [breakpoint(991)]: {
+      // position: 'relative',
+    },
   },
   customPlayButton: {
     position: 'absolute',
@@ -50,6 +54,9 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
+    [breakpoint(1200)]: {
+      display: 'none',
+    },
   },
   whitePlayButton: {
     background: colors.light,

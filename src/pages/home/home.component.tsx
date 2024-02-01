@@ -12,23 +12,29 @@ import useLocalization from 'assets/lang';
 const HomeComponent = () => {
   const classes = useHomeStyles();
   const translate = useLocalization();
-  const {data} = useVideos();  
+  const { data } = useVideos();
   return (
     <div className='container'>
       <section className='leadsSection'>
         <LeadsComponent i={0}>
-          <ButtonComponent
-            url=''
-            buttonText='Products'
-            classN='greenBtn'
-            close={''}
-          />
-          <ButtonComponent
-            url=''
-            buttonText='About NICART'
-            classN='greyBtn'
-            close={''}
-          />
+          <div className='row'>
+            <div className='col-6'>
+              <ButtonComponent
+                url=''
+                buttonText='Products'
+                classN='greenBtn'
+                close={''}
+              />
+            </div>
+            <div className='col-6'>
+              <ButtonComponent
+                url=''
+                buttonText='About NICART'
+                classN='greyBtn'
+                close={''}
+              />
+            </div>
+          </div>
         </LeadsComponent>
       </section>
       <section className={classes.grey}>

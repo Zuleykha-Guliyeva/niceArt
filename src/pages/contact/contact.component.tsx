@@ -11,9 +11,9 @@ import { useContact } from './actions/contact.query';
 const ContactComponent = () => {
   const classes = useContactStyles();
   const translate = useLocalization();
-  const {data} = useContact();
+  const { data } = useContact();
   console.log(data);
-  
+
   return (
     <>
       <section className={classes.discoverSection}>
@@ -33,9 +33,7 @@ const ContactComponent = () => {
                   </p>
                 </div>
                 <div className='emailUs mb-37'>
-                  <p className={classes.visitTitle}>
-                    {translate('emailUs')}
-                  </p>
+                  <p className={classes.visitTitle}>{translate('emailUs')}</p>
                   <Link to='#'>
                     <span className={classes.emailDesc}>{data?.email}</span>
                   </Link>

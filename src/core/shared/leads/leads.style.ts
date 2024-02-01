@@ -1,6 +1,7 @@
 import colors from "assets/styles/abstracts/color";
 import fonts from "assets/styles/abstracts/fonts";
 import { rem } from "assets/styles/abstracts/functions";
+import { breakpoint } from "assets/styles/abstracts/mixins";
 import { createUseStyles } from "react-jss"
 
 const styles = {
@@ -12,6 +13,11 @@ const styles = {
     fontFamily: fonts.font,
     color: colors.navActiveText,
     textAlign: 'left',
+    [breakpoint(991)]: {
+      fontSize: rem(36),
+      lineHeight: rem(47),
+      fontWeight: '800',
+    },
   },
   leadDescription: {
     '& p': {
