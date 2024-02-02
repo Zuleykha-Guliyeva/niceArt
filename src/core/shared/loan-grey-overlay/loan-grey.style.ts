@@ -1,6 +1,7 @@
 import colors from 'assets/styles/abstracts/color';
 import fonts from 'assets/styles/abstracts/fonts';
 import { rem } from 'assets/styles/abstracts/functions';
+import { breakpoint } from 'assets/styles/abstracts/mixins';
 import { createUseStyles } from 'react-jss';
 
 const styles = {
@@ -8,6 +9,10 @@ const styles = {
     position: 'relative',
     marginBottom: rem(300),
     padding: `${rem(65) + ' ' + rem(60) + ' ' + rem(65) + ' ' + rem(0)}`,
+    [breakpoint(991)]: {
+      marginBottom: `${rem(90)}!important`,
+      padding: `${rem(16) + ' ' + rem(16)}`,
+    },
   },
   overlay: {
     width: '82%',
@@ -17,6 +22,10 @@ const styles = {
     top: rem(0),
     right: rem(0),
     zIndex: '-5',
+    [breakpoint(991)]: {
+      width: '100%',
+      height: rem(1100),
+    },
   },
   productsTitle: {
     color: colors.navText,
@@ -33,10 +42,11 @@ const styles = {
     lineHeight: rem(24),
   },
   padding: {
-    // padding: rem(57),
+    marginBottom: rem(160),
   },
   aboutOverlay: {
     height: '100%',
   },
+  absolute: {},
 };
 export const useLoanGreyStyles = createUseStyles(styles);

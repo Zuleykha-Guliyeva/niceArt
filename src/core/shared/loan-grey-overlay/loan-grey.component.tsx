@@ -10,7 +10,7 @@ const LoanGreyComponent = ({children,padding,overlay}) => {
         <div className={`${classes.overlay} ${classOverlay}`}></div>
         <div className='row align-center'>
           <div className='col-md-5'>
-            <div className='absolute'>
+            <div className={classes.absolute}>
               <LeadsComponent i={5}>
                 <></>
               </LeadsComponent>

@@ -15,7 +15,7 @@ const PartnersComponent = () => {
           <ButtonComponent
             url=''
             buttonText='Became a partner'
-            classN='greenBtn'
+            classN='partnersBtn'
             close={''}
           />
         </LeadsComponent>

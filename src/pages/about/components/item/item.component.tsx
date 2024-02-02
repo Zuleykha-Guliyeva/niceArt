@@ -6,12 +6,12 @@ const ItemComponent = ({ classN }) => {
   return (
     <div className={classItem}>
       <div className='row'>
-        <div className='col-md-2 mr-40'>
+        <div className='col-2 mr-40'>
           <div className={classes.aboutIcon}>
             <img src={abouticon} alt='' />
           </div>
         </div>
-        <div className='col-md-9'>
+        <div className='col-8'>
           <p className={classes.title}>
             Adipiscing phasellus orci in dictumst faucibus ullamcorper odio
             faucibus. Nunc.

@@ -64,6 +64,29 @@ const styles = {
     marginTop: rem(33),
     cursor: 'pointer',
   },
+  partnersBtn: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: `${rem(12) + ' ' + rem(24) + ' ' + rem(12) + ' ' + rem(24)}`,
+    borderRadius: rem(8),
+    background: colors.navActiveText,
+    border: `1px solid ${colors.navActiveText}`,
+    color: colors.light,
+    fontSize: rem(16),
+    fontWeight: '400',
+    lineHeight: rem(24),
+    textAlign: 'left',
+    marginRight: rem(24),
+    cursor: 'pointer',
+    [breakpoint(991)]: {
+      padding: `${rem(12) + ' ' + rem(10) + ' ' + rem(12) + ' ' + rem(10)}`,
+      '& span': {
+        fontSize: rem(14),
+        paddingRight: `{${rem(5)}!important}`,
+      },
+    },
+  },
   muraciet: {
     padding: `${rem(12) + ' ' + rem(0)}`,
     textAlign: 'center',
@@ -76,6 +99,9 @@ const styles = {
     fontWeight: '400',
     lineHeight: rem(24),
     cursor: 'pointer',
+    [breakpoint(991)]: {
+      marginTop: rem(20),
+    },
   },
   closeBtn: {
     width: '100%',

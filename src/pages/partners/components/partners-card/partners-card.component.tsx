@@ -10,7 +10,7 @@ const PartnersCardComponent = ({item}) => {
   }, [open, setOpen]);
   return (
     <>
-      <div className='col-md-3'>
+      <div className='col-md-3 col-6'>
         <div className={classes.card} onClick={showModal}>
           <div className={classes.titleIcon}>
             <img src={item?.file.url} alt='' />

@@ -42,10 +42,17 @@ const styles = {
     textAlign: 'left',
     marginBottom: rem(10),
     color: colors.navText,
+    [breakpoint(991)]: {
+      fontSize: rem(28),
+      lineHeight: rem(37),
+      fontWeight: '800',
+    },
   },
   relativeRow: {
     position: 'relative!important',
     paddingRight: '0!important',
+    display: 'flex',
+    justifyContent: 'center',
   },
   aboutImg: {
     padding: 0,
@@ -56,6 +63,17 @@ const styles = {
       maxWidth: '100%',
       height: rem(550),
       objectFit: 'cover',
+    },
+    [breakpoint(991)]: {
+      marginTop: rem(21),
+      display: 'flex',
+      justifyContent: 'center',
+      '& img': {
+        position: 'absolute',
+        width: '100%',
+        height: rem(364),
+        objectFit: 'cover',
+      },
     },
   },
 };

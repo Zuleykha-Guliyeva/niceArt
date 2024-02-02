@@ -13,7 +13,7 @@ const CreditStaticItemComponent = ({
         <img src={icon} alt='' />
       </div>
       <p className={classes.icon_title}>{creditPropsTitle}</p>
-      {creditPropsDesc}
+      <p>{creditPropsDesc}</p>
       <span className={classes.icon_descrip}>{creditProps}</span>
     </div>
   );

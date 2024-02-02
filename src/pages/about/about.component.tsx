@@ -1,13 +1,19 @@
 import LeadsComponent from 'core/shared/leads/leads.component';
 import LoanGreyComponent from 'core/shared/loan-grey-overlay/loan-grey.component';
 import ItemsListComponent from './components/Items-list/items-list.component';
-import aboutImg from 'assets/images/statics/about/about-img.png'
+import aboutImg from 'assets/images/statics/about/about-img.png';
 import { useAboutStyles } from './about.style';
 import CategoryComponent from 'core/shared/category-span/category.component';
 import CreditStaticItemComponent from 'core/shared/credit-static/creditStaticItem.component';
 import { generateGuid } from 'core/helpers/generate-guid';
+import { useAbout } from './actions/about.query';
+import aboutIcon from 'assets/images/statics/about/abouticon.png'
 const AboutComponent = () => {
   const classes = useAboutStyles();
+  const { data } = useAbout();
+  const creditAbout = data;
+console.log(creditAbout);
+
   return (
     <div className='container'>
       <section className='leadsSection'>
@@ -29,7 +35,7 @@ const AboutComponent = () => {
       </section>
       <section className='aboutEndSection'>
         <div className='row'>
-          <div className='col-5'>
+          <div className='col-md-5'>
             <CategoryComponent text='Apply to loan' />
             <p className={classes.productsTitle}>
               Id duis id turpis mi quisque. Nulla.
@@ -37,12 +43,16 @@ const AboutComponent = () => {
           </div>
         </div>
         <div className='row justify-end'>
-          <div key={generateGuid()} className='col-md-4'>
-            <CreditStaticItemComponent creditPropsDesc='Pulvinar amet ullamcorper nec nullam , iaculis risus. Feugiat nulla in imperdiet  sit lobortis. Cursus adipiscing aliquam dignissim.' />
-          </div>
-          <div key={generateGuid()} className='col-md-4'>
-            <CreditStaticItemComponent creditPropsDesc='Pulvinar amet ullamcorper nec nullam , iaculis risus. Feugiat nulla in imperdiet  sit lobortis. Cursus adipiscing aliquam dignissim.' />
-          </div>
+          {creditAbout?.map((credit) => (
+            <div key={generateGuid()} className='col-md-4'>
+              <CreditStaticItemComponent
+                icon={aboutIcon}
+                creditPropsTitle={credit?.name}
+                creditPropsDesc={credit?.about.description}
+                creditProps={''}
+              />
+            </div>
+          ))}
         </div>
       </section>
     </div>

@@ -7,10 +7,7 @@ import { useLeadsStyles } from "./leads.style";
 const LeadsComponent: React.FC<ILeadsProps> = ({children,i}) => {
   const classes = useLeadsStyles();
   const {data} = useLeads();
-  const loader = useStore('loader');
- 
-  console.log(data);
-     
+  const loader = useStore('loader');     
   if (!data) {
     return loader;
   }
@@ -73,7 +70,7 @@ const LeadsComponent: React.FC<ILeadsProps> = ({children,i}) => {
               <div className='w-100'>{children}</div>
             </div>
           </div>
-          <div className='col-6 p-0'>
+          <div className='col-md-6 p-0'>
             <div className={classes.aboutImg}>
               <img src={data[i].file?.url} alt='' />
             </div>

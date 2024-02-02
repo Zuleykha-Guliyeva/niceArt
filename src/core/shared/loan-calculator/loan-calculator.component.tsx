@@ -50,7 +50,7 @@ const LoanCalculatorComponent = () => {
         {({ values, setFieldValue }) => (
           <Form>
             <div className='row mb-30'>
-              <div className='col-md-4 pr-0'>
+              <div className='col-md-4 pr-0 mb-30'>
                 <label htmlFor='loanAmount' className={classes.inputLabel}>
                   {translate('ammount')}
                 </label>
@@ -95,91 +95,95 @@ const LoanCalculatorComponent = () => {
                 />
               </div>
               <div className='col-md-4 p-0'>
-                <label htmlFor='loanTerm' className={classes.inputLabel}>
-                  {translate('period')}
-                </label>
-                <Field
-                  id='loanTerm'
-                  name='loanTerm'
-                  className={classes.input}
-                  onChange={(event) => {
-                    const newLoanTerm = parseFloat(event.target.value);
-                    const { loanAmount, interestRate } = values;
+                <div className={classes.paddingL15}>
+                  <label htmlFor='loanTerm' className={classes.inputLabel}>
+                    {translate('period')}
+                  </label>
+                  <Field
+                    id='loanTerm'
+                    name='loanTerm'
+                    className={classes.input}
+                    onChange={(event) => {
+                      const newLoanTerm = parseFloat(event.target.value);
+                      const { loanAmount, interestRate } = values;
 
-                    const calculatedMonthlyPayment = calculateMonthlyPayment(
-                      loanAmount,
-                      newLoanTerm,
-                      interestRate
-                    );
+                      const calculatedMonthlyPayment = calculateMonthlyPayment(
+                        loanAmount,
+                        newLoanTerm,
+                        interestRate
+                      );
 
-                    setMonthlyPayment(
-                      parseFloat(calculatedMonthlyPayment.toFixed(2))
-                    );
-                    setFieldValue('loanTerm', newLoanTerm);
-                  }}
-                />
-                <Slider
-                  defaultValue={12}
-                  value={values.loanTerm}
-                  onChange={(value) => {
-                    const { loanAmount, interestRate } = values;
+                      setMonthlyPayment(
+                        parseFloat(calculatedMonthlyPayment.toFixed(2))
+                      );
+                      setFieldValue('loanTerm', newLoanTerm);
+                    }}
+                  />
+                  <Slider
+                    defaultValue={12}
+                    value={values.loanTerm}
+                    onChange={(value) => {
+                      const { loanAmount, interestRate } = values;
 
-                    const calculatedMonthlyPayment = calculateMonthlyPayment(
-                      loanAmount,
-                      value,
-                      interestRate
-                    );
+                      const calculatedMonthlyPayment = calculateMonthlyPayment(
+                        loanAmount,
+                        value,
+                        interestRate
+                      );
 
-                    setMonthlyPayment(
-                      parseFloat(calculatedMonthlyPayment.toFixed(2))
-                    );
-                    setFieldValue('loanTerm', value);
-                  }}
-                  max={180}
-                />
+                      setMonthlyPayment(
+                        parseFloat(calculatedMonthlyPayment.toFixed(2))
+                      );
+                      setFieldValue('loanTerm', value);
+                    }}
+                    max={180}
+                  />
+                </div>
               </div>
               <div className='col-md-4 pl-0'>
-                <label htmlFor='interestRate' className={classes.inputLabel}>
-                  {translate('interestrate')}
-                </label>
-                <Field
-                  id='interestRate'
-                  name='interestRate'
-                  className={classes.input}
-                  onChange={(event) => {
-                    const newInterestRate = parseFloat(event.target.value);
-                    const { loanAmount, loanTerm } = values;
+                <div className={classes.paddingL15}>
+                  <label htmlFor='interestRate' className={classes.inputLabel}>
+                    {translate('interestrate')}
+                  </label>
+                  <Field
+                    id='interestRate'
+                    name='interestRate'
+                    className={classes.input}
+                    onChange={(event) => {
+                      const newInterestRate = parseFloat(event.target.value);
+                      const { loanAmount, loanTerm } = values;
 
-                    const calculatedMonthlyPayment = calculateMonthlyPayment(
-                      loanAmount,
-                      loanTerm,
-                      newInterestRate
-                    );
+                      const calculatedMonthlyPayment = calculateMonthlyPayment(
+                        loanAmount,
+                        loanTerm,
+                        newInterestRate
+                      );
 
-                    setMonthlyPayment(
-                      parseFloat(calculatedMonthlyPayment.toFixed(2))
-                    );
-                    setFieldValue('interestRate', newInterestRate);
-                  }}
-                />
-                <Slider
-                  defaultValue={14}
-                  value={values.interestRate}
-                  onChange={(value) => {
-                    const { loanAmount, loanTerm } = values;
+                      setMonthlyPayment(
+                        parseFloat(calculatedMonthlyPayment.toFixed(2))
+                      );
+                      setFieldValue('interestRate', newInterestRate);
+                    }}
+                  />
+                  <Slider
+                    defaultValue={14}
+                    value={values.interestRate}
+                    onChange={(value) => {
+                      const { loanAmount, loanTerm } = values;
 
-                    const calculatedMonthlyPayment = calculateMonthlyPayment(
-                      loanAmount,
-                      loanTerm,
-                      value
-                    );
+                      const calculatedMonthlyPayment = calculateMonthlyPayment(
+                        loanAmount,
+                        loanTerm,
+                        value
+                      );
 
-                    setMonthlyPayment(
-                      parseFloat(calculatedMonthlyPayment.toFixed(2))
-                    );
-                    setFieldValue('interestRate', value);
-                  }}
-                />
+                      setMonthlyPayment(
+                        parseFloat(calculatedMonthlyPayment.toFixed(2))
+                      );
+                      setFieldValue('interestRate', value);
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div className='row mb-40'>
@@ -205,16 +209,18 @@ const LoanCalculatorComponent = () => {
                 />
               </div>
               <div className='col-md-6'>
-                <label htmlFor='phone' className={classes.inputLabelFin}>
-                  {translate('phone')}
-                </label>
-                <br />
-                <Field
-                  id='phone'
-                  name='phone'
-                  className={classes.input}
-                  placeholder='+994 00 000 00 00'
-                />
+                <div className={classes.marginT20}>
+                  <label htmlFor='phone' className={classes.inputLabelFin}>
+                    {translate('phone')}
+                  </label>
+                  <br />
+                  <Field
+                    id='phone'
+                    name='phone'
+                    className={classes.input}
+                    placeholder='+994 00 000 00 00'
+                  />
+                </div>
               </div>
             </div>
             <div className='row align-center'>

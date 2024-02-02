@@ -13,9 +13,18 @@ const styles = {
     height: rem(1050),
     position: 'relative',
     marginBottom: rem(300),
+    [breakpoint(991)]: {
+      height: rem(850),
+      paddingLeft: rem(12),
+      paddingRight: rem(0),
+      marginBottom: rem(100),
+    },
   },
   videoSec: {
     height: rem(580),
+    [breakpoint(991)]: {
+      height: '150px',
+    },
   },
   videoText: {
     fontFamily: fonts.font,
@@ -26,6 +35,10 @@ const styles = {
     textAlign: 'justify',
     color: colors.navText,
     marginTop: rem(460),
+    [breakpoint(991)]: {
+      marginTop: rem(105),
+      marginBottom: rem(40),
+    },
   },
   video: {
     position: 'absolute',
@@ -34,7 +47,10 @@ const styles = {
     right: rem(106),
     height: rem(578),
     [breakpoint(991)]: {
-      // position: 'relative',
+      height: rem(187),
+      left: rem(12),
+      right: rem(12),
+      top: '-95px',
     },
   },
   customPlayButton: {
@@ -107,6 +123,10 @@ const styles = {
     fontSize: rem(44),
     fontWeight: '800',
     lineHeight: rem(59),
+    [breakpoint(991)]: {
+      fontSize: rem(28),
+      lineHeight: rem(40),
+    },
   },
   productsDescription: {
     color: colors.navText,
