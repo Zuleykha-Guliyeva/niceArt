@@ -6,5 +6,5 @@ export const API = {
   strategies: '65892699dc74654018887158',
   partners: '65892bfbdc746540188872ce',
   contactFiles: '65892f171f5677401f13044e',
-  products: "65896e2a266cfc3fde6e1298",
+  products: '65896e2a266cfc3fde6e1298',
 };
